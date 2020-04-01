@@ -17,7 +17,7 @@
             </a>
 
             
-            <ul class="show-desktop hide-desktop" id="nav">
+            <ul class="show-desktop hide-mobile" id="nav">
               <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu">
               <li><a href="#">home</a></li>
               <li><a href="#">services</a></li>
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-        <div class="grayt-container">
+        <div class="gray-container">
           <div class="container">
             <ul>
                 <li>
@@ -84,7 +84,7 @@
           </div>
 
           <footer>
-            <div class="foter-container">
+            <div class="footer-container">
               <div class="container">
                 <a href="#">
                   <img src="images/logo-white.svg" class="logo" alt="logo">
@@ -98,5 +98,21 @@
               </div>
             </div>
           </footer>
+
+          <script>
+            var menu = document.getElementById('menu');
+            var nav = document.getElementById('nav');
+            var exit = document.getElementById('exit');
+
+            menu.addEventListener('click', function(e) {
+              nav.classList.toggle('hide-mobile');
+              e.preventDefault();
+            });
+            exit.addEventListener('click', function(e) {
+              nav.classList.add('hide-mobile');
+              e.preventDefault();
+            });
+
+          </script>
   </body>
   </html>
